@@ -5,7 +5,7 @@ header.navigation
   $dark-gray: #333333 !default
   $large-screen: em(860) !default
   $navigation-padding: 1em
-  $navigation-background: $dark-gray
+  $navigation-background: $orange
   $navigation-color: transparentize(white, 0.3)
   $navigation-color-hover: white
   $navigation-height: 60px
@@ -19,14 +19,15 @@ header.navigation
   $navigation-submenu-width: 12em
   $horizontal-bar-mode: $large-screen
   background-color: $navigation-background
-  border-bottom: 1px solid darken($navigation-background, 10)
+  border-bottom: 4px solid darken($navigation-background, 10)
   min-height: $navigation-height
   width: 100%
   z-index: 999
+  position: fixed
   .navigation-wrapper
     +clearfix
     +outer-container
-    position: relative
+    position: fixed
     z-index: 9999
   .logo
     float: left

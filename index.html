@@ -12,13 +12,13 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="javascript:void(0)" class="logo">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
+      <img src="assets/img/logo.png" alt="Logo Image">
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
         <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Meet The Dogs</a></li>
         <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
         <li class="nav-link more"><a href="javascript:void(0)">More</a>
           <ul class="submenu">
@@ -46,25 +46,155 @@
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <h1>Walpole Dog Walker</h1>
+      <h1 class="huge">Walpole Dog Walker</h1>
+      <p>Happy & Healthy Dogs</p>  
     </div>
   </div>
 </div>
 
-<div class="about">
-  <h1 class="big text-center">Keep your dog mentally sharp and physically fit</h1>
-  <p>Your dog will enjoy an active lifestyle and you will get the peace of mind knowing that they are not home alone all day.  We are professionally trained, fully insured and will treat your pet like our own.</p>
+
+<div class="container">
+  <div class="about">
+    <h1 class="big text-center">Keep your dog mentally sharp and physically fit</h1>
+    <p>Your dog will enjoy an active lifestyle and you will get the peace of mind knowing that they are not home alone all day.  We are professionally trained, fully insured and will treat your pet like our own.</p>
+  </div>
+
+  <div class="works">
+    <h1 class="big">How Does it Work?</h1>
+    <p>Your dog's walk can be either a 60-minute hike in the woods or a 30-minute stroll around the neighborhood.  Choose between a solo or group walk at no additional charge.  Our packs are limited to no more than three dogs.  Looking to offer your pet a chance to simply get outside during the day to relieve themselves? Our let-out visit might be just what you need!</p>
+  </div>
+<div class="cards">
+  <div class="card">
+    <div class="card-image">
+      <img src="assets/img/dog3.jpg" alt="">
+    </div>
+    <div class="card-header">
+      Drop Your Dog Off
+    </div>
+    <div class="card-copy">
+      <p>Drop your dog off with Patty who will greet you and go over any restrictions. All breeds are welcome on walks!</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="assets/img/dog4.jpg" alt="">
+    </div>
+    <div class="card-header">
+      Dog socalizing & Dog exercise
+    </div>
+    <div class="card-copy">
+      <p>Your dog will spend time familiarizing with the other dogs. Each walk is typically 30 minutes. choose between a solor or a group walk at no additional charge. </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="assets/img/dog1.jpg" alt="">
+    </div>
+    <div class="card-header">
+      Pickup Your Rejuvinated Dog
+    </div>
+    <div class="card-copy">
+      <p>When your dog has finished walking, you can pick them up at the set time. We welcome all dogs to stay during our doggie daycare.</p>
+    </div>
+  </div>
+</div>
 </div>
 
-<div class="works">
-  <h1 class="big">How Does it Work?</h1>
-  <p>Your dog's walk can be either a 60-minute hike in the woods or a 30-minute stroll around the neighborhood.  Choose between a solo or group walk at no additional charge.  Our packs are limited to no more than three dogs.  Looking to offer your pet a chance to simply get outside during the day to relieve themselves? Our let-out visit might be just what you need!</p>
+<div id="map_canvas">
+  
 </div>
 
 
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+  </div>
+  <!-- <div class="footer-links">
+    <ul>
+      <li><h3>Content</h3></li>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+    <ul>
+      <li><h3>Follow Us</h3></li>
+      <li><a href="javascript:void(0)">Facebook</a></li>
+      <li><a href="javascript:void(0)">Twitter</a></li>
+      <li><a href="javascript:void(0)">YouTube</a></li>
+    </ul>
+    <ul>
+      <li><h3>Legal</h3></li>
+      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+      <li><a href="javascript:void(0)">Privacy Policy</a></li>
+    </ul>
+  </div> -->
+
+  <hr>
+
+  <p>2015 Walpole Dog Walker</p>
+</footer>
 
 
 <script src="assets/js/jquery-2.1.4.min.js"></script>
 <script src="assets/js/functions.js" type="text/javascript"></script>
+<script src="assets/js/parallax.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  var bittersMap = (function () {
+    var myLatlng = new google.maps.LatLng(42.135498, -71.244974),
+        mapCenter = new google.maps.LatLng(42.135498, -71.244974),
+        mapCanvas = document.getElementById('map_canvas'),
+        mapOptions = {
+          center: mapCenter,
+          zoom: 15,
+          scrollwheel: false,
+          draggable: false,
+          disableDefaultUI: true,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        },
+        map = new google.maps.Map(mapCanvas, mapOptions),
+        contentString =
+          '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">thoughtbot</h1>'+
+          '<div id="bodyContent"'+
+          '<p>Sveavägen 98</p>'+
+          '</div>'+
+          '</div>',
+        infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 300
+        }),
+        marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'thoughtbot (Sweden)'
+        });
+
+    return {
+      init: function () {
+        map.set('styles', [{
+          featureType: 'landscape',
+          elementType: 'geometry',
+          stylers: [
+            { hue: '#ffff00' },
+            { saturation: 30 },
+            { lightness: 10}
+          ]}
+        ]);
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infowindow.open(map,marker);
+        });
+      }
+    };
+  }());
+
+  bittersMap.init();
+</script>
 </body>
 </html>
