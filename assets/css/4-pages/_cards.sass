@@ -3,6 +3,7 @@
   +flex-wrap(wrap)
   +justify-content(space-between)
 
+
 .card
   $base-border-color: gainsboro !default
   $base-border-radius: 3px !default
@@ -20,7 +21,7 @@
   $card-image-hover-color: $orange
   +flex-basis(15em)
   +flex-grow(1)
-  +transition(all 0.2s ease-in-out)
+  +transition(all 0.2s ease-in)
   background-color: $card-background
   border-radius: $base-border-radius
   border: $card-border
@@ -34,6 +35,7 @@
     max-height: 650px
     background-color: $card-image-hover-color
     img
+      @include animation-timing-function(ease-in)
       +transition(all 0.2s ease-in-out)
       border-top-left-radius: $base-border-radius
       border-top-right-radius: $base-border-radius

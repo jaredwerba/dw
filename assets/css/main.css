@@ -214,10 +214,10 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 ::selection {
-  background: #FFF498; }
+  background: #FF851B; }
 
 ::-moz-selection {
-  background: #FFF498; }
+  background: #FF851B; }
 
 img::selection {
   background: transparent; }
@@ -226,7 +226,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #FFF498; }
+  -webkit-tap-highlight-color: #FF851B; }
 
 a {
   color: #0074D9;
@@ -321,83 +321,17 @@ input[type="button"] {
     border-color: #888;
     outline: 0; }
 
-.name-lockup {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 10px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0; }
-
-.fork-tag {
-  position: absolute;
-  top: 10px;
-  right: -10px;
-  background: #0074D9;
-  color: white;
-  padding: 2px 6px;
-  transition: all 0.3s ease-in-out;
-  transform-origin: top right; }
-  .fork-tag:hover {
-    color: white;
-    animation: wiggle 0.4s linear 1; }
-
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg); }
-  20% {
-    transform: rotate(8deg); }
-  50% {
-    transform: rotate(-8deg); }
-  80% {
-    transform: rotate(8deg); }
-  100% {
-    transform: rotate(0deg); } }
-.flex-video {
-  height: 0;
-  margin-bottom: 0.88889rem;
-  overflow: hidden;
-  padding-bottom: 56%;
-  position: relative; }
-
-.flex-video iframe,
-.flex-video object,
-.flex-video embed,
-.flex-video video {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0; }
-
 .container {
   text-align: center; }
 
 .hero {
-  background: url("../img/hero.jpg"), -webkit-linear-gradient(-280deg, #e67e22, #7f99be), no-repeat #7f99be scroll;
-  background: url("../img/hero.jpg"), linear-gradient(10deg, #e67e22, #7f99be), no-repeat #7f99be scroll;
-  background-color: #324766;
-  background-position: center;
+  background: url("../img/hero.jpg");
+  background: url("../img/hero.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 3em; }
-  .hero .hero-logo img {
-    height: 4em;
-    margin-bottom: 1em;
-      margin-bottom-background: url("../img/logo.png");
-      margin-bottom-background: url("../img/logo.png"); }
   .hero .hero-inner {
     max-width: 68em;
     margin-left: auto;
@@ -678,9 +612,25 @@ header.navigation {
 .about {
   padding: 1em;
   background-color: #f1f1f1; }
+  .about p {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .about p::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 .works {
   padding: 1em; }
+  .works p {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .works p::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 .cards {
   display: -webkit-box;
@@ -716,9 +666,9 @@ header.navigation {
   -moz-flex-grow: 1;
   flex-grow: 1;
   -ms-flex-positive: 1;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   background-color: #f6f6f6;
   border-radius: 3px;
   border: 1px solid gainsboro;
@@ -732,6 +682,9 @@ header.navigation {
     max-height: 650px;
     background-color: #FF851B; }
     .card .card-image img {
+      -webkit-animation-timing-function: ease-in;
+      -moz-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
@@ -815,7 +768,7 @@ header.navigation {
 #map_canvas {
   height: 400px;
   width: 100%;
-  border-bottom: 4px solid #e76b00; }
+  border-bottom: 4px solid #ce6000; }
 
 #map_canvas img {
   max-width: none; }
@@ -834,11 +787,9 @@ header.navigation {
   margin: 0; }
 
 .footer {
-  background: #db6c0c;
+  background: #FF851B;
   padding: 3em 1.618em;
-  width: 100%;
-  position: relative;
-  z-index: -9; }
+  width: 100%; }
   .footer .footer-logo {
     margin-bottom: 2em;
     text-align: center; }
@@ -899,7 +850,7 @@ header.navigation {
     width: 12em; }
   .footer p {
     color: rgba(255, 255, 255, 0.4);
-    font-size: 0.9em;
+    font-size: 2em;
     line-height: 1.5em;
     margin: auto;
     max-width: 35em;

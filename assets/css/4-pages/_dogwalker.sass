@@ -9,20 +9,14 @@
   $hero-background-top: #7f99be
   $hero-background-bottom: #e67e22
   $hero-color: $light-gray
-  $gradient-angle: 10deg
   $hero-image: "../img/hero.jpg"
-  $hero-logo: "../img/logo.png"
-  +background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll)
-  background-color: #324766
-  background-position: center
+  $hero-logo: "assets/img/logo.png"
+  +background(url($hero-image) )
+  background-position: center center
   background-repeat: no-repeat
   background-attachment: fixed
   background-size: cover
   padding-bottom: 3em
-  .hero-logo img
-    height: 4em
-    margin-bottom: 1em
-      +background(url($hero-logo))
   .hero-inner
     +outer-container
     +clearfix

@@ -3,15 +3,13 @@
   $action-color: $orange !default
   $medium-screen: em(640) !default
   $large-screen: em(860) !default
-  $footer-background: desaturate(darken($action-color, 10%), 10%)
+  $footer-background: $action-color
   $footer-color: white
   $footer-link-color: transparentize($footer-color, 0.6)
   $footer-disclaimer-color: transparentize($footer-color, 0.6)
   background: $footer-background
   padding: $base-spacing * 2 $gutter
   width: 100%
-  position: relative
-  z-index: -9
   .footer-logo
     margin-bottom: 2em
     text-align: center
@@ -47,7 +45,7 @@
     width: 12em
   p
     color: $footer-disclaimer-color
-    font-size: 0.9em
+    font-size: 2em
     line-height: 1.5em
     margin: auto
     max-width: 35em
