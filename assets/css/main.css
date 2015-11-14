@@ -655,7 +655,8 @@ header.navigation {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
-  -ms-flex-pack: justify; }
+  -ms-flex-pack: justify;
+  margin-bottom: 1em; }
 
 .card {
   -webkit-flex-basis: 15em;
