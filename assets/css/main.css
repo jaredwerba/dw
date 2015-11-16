@@ -228,13 +228,6 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #FF851B; }
 
-a {
-  color: #0074D9;
-  text-decoration: none;
-  outline: 0; }
-  a:hover, a:focus {
-    color: #40a6ff; }
-
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #222;
@@ -632,6 +625,14 @@ header.navigation {
       content: "";
       display: table; }
 
+#cardz .numbers {
+  visibility: hidden;
+  font-size: 8em;
+  text-align: center;
+  color: white; }
+#cardz:hover .numbers {
+  visibility: visible; }
+
 .cards {
   display: -webkit-box;
   display: -moz-box;
@@ -657,6 +658,8 @@ header.navigation {
   justify-content: space-between;
   -ms-flex-pack: justify;
   margin-bottom: 1em; }
+  .cards:hover .numbers {
+    visibility: visible; }
 
 .card {
   -webkit-flex-basis: 15em;
@@ -693,6 +696,8 @@ header.navigation {
       border-top-right-radius: 3px;
       width: 100%;
       opacity: 1; }
+  .card:focus .numbers, .card:hover .numbers {
+    visibility: visible; }
   .card .card-header {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -718,53 +723,13 @@ header.navigation {
     .card:active .card-header {
       background-color: #f6f6f6; }
 
-.parallax-window {
-  max-height: 70em;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%; }
-
-.parallax-static-content {
-  color: #9A9A8A;
-  padding: 8em 0;
-  position: relative;
-  z-index: 9; }
-
-.parallax-background {
-  background: url("../img/dog2.jpg") repeat;
-  background-position: top;
-  background-size: cover;
-  background-color: beige;
-  height: 140em;
-  left: 0;
-  position: absolute;
-  top: -23.33333em;
-  width: 100%; }
-
-.parallax-window {
-  max-height: 30em;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%; }
-
-.parallax-static-content {
-  color: #9A9A8A;
-  padding: 8em 0;
-  position: relative;
-  z-index: 9; }
-
-.parallax-background {
-  background: url("../img/dog2.jpg") repeat;
-  background-position: top;
-  background-size: cover;
-  background-color: beige;
-  height: 60em;
-  left: 0;
-  position: absolute;
-  top: -10em;
-  width: 100%; }
+.numbers {
+  width: 100px;
+  height: 100px;
+  background-color: #FF851B;
+  visibility: hidden; }
+  .numbers:hover {
+    visibility: visible; }
 
 #map_canvas {
   height: 400px;

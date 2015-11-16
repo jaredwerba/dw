@@ -1,9 +1,19 @@
+#cardz
+  .numbers
+    visibility: hidden
+    font-size: 8em
+    text-align: center
+    color: white
+  &:hover .numbers
+    visibility: visible
+
 .cards
   +display(flex)
   +flex-wrap(wrap)
   +justify-content(space-between)
   margin-bottom: 1em
-
+  &:hover .numbers
+    visibility: visible
 
 .card
   $base-border-color: gainsboro !default
@@ -42,6 +52,10 @@
       border-top-right-radius: $base-border-radius
       width: 100%
       opacity: 1
+  &:focus,
+  &:hover
+    .numbers
+      visibility: visible
   .card-header
     +transition(all 0.2s ease-in-out)
     background-color: $card-header-background
@@ -50,6 +64,7 @@
     font-weight: bold
     line-height: 1.5em
     padding: $base-spacing / 3 $base-spacing / 2
+
   .card-copy
     font-size: 0.9em
     line-height: 1.5em
@@ -65,3 +80,11 @@
     background-color: $card-background
     .card-header
       background-color: $card-background
+
+.numbers
+  width: 100px
+  height: 100px
+  background-color: $orange
+  visibility: hidden
+  &:hover
+    visibility: visible
